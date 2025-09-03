@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Municipalidad de San Nicolás — Portafolio</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <script defer src="js/guard.js"></script>
+</head>
+<body class="bg">
+  <header class="topbar">
+    <div class="brand">Municipalidad de San Nicolás — DAEM</div>
+    <nav>
+      <button class="btn ghost" onclick="location.href='dashboard.html'">Volver</button>
+      <button class="btn ghost danger" onclick="logout()">Salir</button>
+    </nav>
+  </header>
+  <main class="container">
+    <h1>Modelo educativo comunal</h1>
+    <p class="lead">“Estos proyectos ya se desarrollan en el liceo y pueden convertirse en un modelo educativo para la comuna”.</p>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Proyectos activos en el liceo</h2>
+        <ul>
+          <li>Órtesis 3D (inclusión y rehabilitación).</li>
+          <li>Cartas-AR Biología (AR/3D).</li>
+          <li>Trivias-CN (evaluación interactiva).</li>
+          <li>Hidroponía y Acuaponía (con apoyo INCAR).</li>
+          <li>SIAMP (monitoreo piscícola IoT).</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Visión y escalamiento</h2>
+        <ul>
+          <li>Crear un polo de innovación educativa comunal.</li>
+          <li>Vinculación con universidades y empresas.</li>
+          <li>Capacitación docente y equipamiento gradual.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Apoyo requerido</h2>
+        <ul>
+          <li>Respaldo municipal y financiamiento local.</li>
+          <li>Adquisición de licencias educativas.</li>
+          <li>Co-financiamiento de equipamiento y talleres.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  <script>function logout(){ localStorage.removeItem('auth'); location.href='index.html'; }</script>
+</body>
+</html>

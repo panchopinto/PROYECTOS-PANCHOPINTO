@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>SEREMI — Portafolio</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <script defer src="js/guard.js"></script>
+</head>
+<body class="bg">
+  <header class="topbar">
+    <div class="brand">SEREMI Educación Ñuble</div>
+    <nav>
+      <button class="btn ghost" onclick="location.href='dashboard.html'">Volver</button>
+      <button class="btn ghost danger" onclick="logout()">Salir</button>
+    </nav>
+  </header>
+  <main class="container">
+    <h1>Innovaciones educativas inclusivas</h1>
+    <p class="lead">“Estos proyectos son innovaciones educativas inclusivas, listos para pilotear en liceos de Ñuble”.</p>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Órtesis 3D personalizadas</h2>
+        <ul>
+          <li>Apoyo a estudiantes PIE.</li>
+          <li>Diseño a medida y fabricación rápida (impresión 3D).</li>
+          <li>Alianzas con salud y educación.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Cartas-AR Biología (Células)</h2>
+        <ul>
+          <li>Modelos 3D/AR con etiquetas educativas.</li>
+          <li>Escalable a otras asignaturas.</li>
+          <li>Versión demo bajo acceso restringido.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Trivias Educativas</h2>
+        <ul>
+          <li>Evaluaciones interactivas, banco de preguntas.</li>
+          <li>Reportes básicos para docentes.</li>
+          <li>Funciona offline si se requiere.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="card max-w">
+      <h2>Objetivo de la reunión</h2>
+      <p>Validación y difusión regional. Posible financiamiento de pilotajes en liceos de Ñuble.</p>
+    </section>
+  </main>
+  <script>function logout(){ localStorage.removeItem('auth'); location.href='index.html'; }</script>
+</body>
+</html>
