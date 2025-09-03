@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Panel — Portafolio Privado</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <script defer src="js/guard.js"></script>
+</head>
+<body>
+  
+<header class="topbar">
+  <div class="brand">Portafolio Privado</div>
+  <nav class="nav">
+    <a class="tab " href="seremi.html">SEREMI</a>
+    <a class="tab " href="sannicolas.html">Municipalidad San Nicolás<span class="badge">DAEM</span></a>
+    <a class="tab " href="chillan.html">Municipalidad Chillán<span class="badge">DAEM</span></a>
+  </nav>
+  <nav class="nav">
+    <a class="tab" href="index.html" onclick="localStorage.removeItem('auth')">Cambiar usuario</a>
+  </nav>
+</header>
+
+  <main class="container">
+    <section class="hero card hero-center">
+      <h1>Selecciona a quién presentar</h1>
+      <p class="lead">Elige el destinatario para ver el contenido adaptado y las demos (Células y Trivias).</p>
+    </section>
+    <section class="tiles">
+      <article class="card tile">
+        <div>
+          <h2>SEREMI Educación Ñuble</h2>
+          <p class="lead">Innovaciones educativas inclusivas listas para pilotear en liceos de Ñuble.</p>
+        </div>
+        <a class="cta" href="seremi.html">Abrir presentación SEREMI</a>
+      </article>
+      <article class="card tile">
+        <div>
+          <h2>Municipalidad San Nicolás <span class="badge">DAEM</span></h2>
+          <p class="lead">Modelo educativo comunal basado en proyectos activos del liceo.</p>
+        </div>
+        <a class="cta" href="sannicolas.html">Abrir presentación San Nicolás</a>
+      </article>
+      <article class="card tile">
+        <div>
+          <h2>Municipalidad Chillán <span class="badge">DAEM</span></h2>
+          <p class="lead">Paquetes vendibles: licencias de plataformas + órtesis 3D.</p>
+        </div>
+        <a class="cta" href="chillan.html">Abrir presentación Chillán</a>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

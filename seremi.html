@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>SEREMI — Portafolio</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <script defer src="js/guard.js"></script>
+</head>
+<body>
+  
+<header class="topbar">
+  <div class="brand">Portafolio Privado</div>
+  <nav class="nav">
+    <a class="tab active" href="seremi.html">SEREMI</a>
+    <a class="tab " href="sannicolas.html">Municipalidad San Nicolás<span class="badge">DAEM</span></a>
+    <a class="tab " href="chillan.html">Municipalidad Chillán<span class="badge">DAEM</span></a>
+  </nav>
+  <nav class="nav">
+    <a class="tab" href="index.html" onclick="localStorage.removeItem('auth')">Cambiar usuario</a>
+  </nav>
+</header>
+
+  <main class="container">
+    <section class="hero card">
+      <h1>SEREMI de Educación Ñuble</h1>
+      <p class="lead">“Estos proyectos son innovaciones educativas inclusivas, listos para pilotear en liceos de Ñuble”.</p>
+    </section>
+    <section class="grid">
+      <article class="card">
+        <h2>Órtesis 3D personalizadas</h2>
+        <ul class="list">
+          <li>Apoyo directo a estudiantes PIE.</li>
+          <li>Diseño a medida, impresión 3D rápida.</li>
+          <li>Vinculación con salud y educación.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h2>Cartas-AR Biología (Células)</h2>
+        <ul class="list">
+          <li>Modelos 3D/AR con etiquetas educativas.</li>
+          <li>Escalable a otras asignaturas.</li>
+          <li>Demo protegida por login.</li>
+        </ul>
+        <a class="cta" href="apps/celulas/cartas-ar-biologia-main/index.html">Ver Células (AR/3D)</a>
+        <p class="note">Acceso restringido por correo + clave.</p>
+      </article>
+      <article class="card">
+        <h2>Trivias Educativas</h2>
+        <ul class="list">
+          <li>Evaluaciones interactivas para el aula.</li>
+          <li>Banco de preguntas ampliable.</li>
+          <li>Reportes básicos para docentes.</li>
+        </ul>
+        <a class="cta alt" href="apps/trivias/trivias-biologia-main/index.html">Ver Trivias</a>
+        <p class="note">Acceso restringido por correo + clave.</p>
+      </article>
+    </section>
+    <footer>© Portafolio — Uso interno y demostraciones.</footer>
+  </main>
+</body>
+</html>

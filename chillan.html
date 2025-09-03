@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Municipalidad de Chillán — Portafolio</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <script defer src="js/guard.js"></script>
+</head>
+<body>
+  
+<header class="topbar">
+  <div class="brand">Portafolio Privado</div>
+  <nav class="nav">
+    <a class="tab " href="seremi.html">SEREMI</a>
+    <a class="tab " href="sannicolas.html">Municipalidad San Nicolás<span class="badge">DAEM</span></a>
+    <a class="tab active" href="chillan.html">Municipalidad Chillán<span class="badge">DAEM</span></a>
+  </nav>
+  <nav class="nav">
+    <a class="tab" href="index.html" onclick="localStorage.removeItem('auth')">Cambiar usuario</a>
+  </nav>
+</header>
+
+  <main class="container">
+    <section class="hero card">
+      <h1>Municipalidad de Chillán — DAEM</h1>
+      <p class="lead">“Ofrezco licencias anuales de plataformas inclusivas y proyectos de órtesis 3D para estudiantes con necesidades especiales”.</p>
+    </section>
+    <section class="grid">
+      <article class="card">
+        <h2>Pack Plataformas (anual)</h2>
+        <ul class="list">
+          <li>Cartas-AR Biología: $200.000 CLP/año</li>
+          <li>Trivias-CN: $200.000 CLP/año</li>
+          <li><strong>Pack conjunto:</strong> $350.000 CLP/año por colegio</li>
+        </ul>
+        <a class="cta" href="apps/celulas/cartas-ar-biologia-main/index.html">Ver Células (AR/3D)</a>
+        <a class="cta alt" style="margin-left:8px" href="apps/trivias/trivias-biologia-main/index.html">Ver Trivias</a>
+      </article>
+      <article class="card">
+        <h2>Órtesis 3D</h2>
+        <ul class="list">
+          <li>Precio referencial: $60.000 CLP por órtesis.</li>
+          <li>Evaluación y adaptación en el liceo.</li>
+        </ul>
+      </article>
+    </section>
+    <footer>© Portafolio — Uso interno y demostraciones.</footer>
+  </main>
+</body>
+</html>
