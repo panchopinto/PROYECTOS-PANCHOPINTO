@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Municipalidad de San Nicolás — Portafolio</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <script defer src="js/guard.js"></script>
+</head>
+<body>
+  
+<header class="topbar">
+  <div class="brand">Portafolio Privado</div>
+  <nav class="nav">
+    <a class="tab " href="seremi.html">SEREMI</a>
+    <a class="tab active" href="sannicolas.html">Municipalidad San Nicolás<span class="badge">DAEM</span></a>
+    <a class="tab " href="chillan.html">Municipalidad Chillán<span class="badge">DAEM</span></a>
+  </nav>
+  <nav class="nav">
+    <a class="tab" href="index.html" onclick="localStorage.removeItem('auth')">Cambiar usuario</a>
+  </nav>
+</header>
+
+  <main class="container">
+    <section class="hero card">
+      <h1>Municipalidad de San Nicolás — DAEM</h1>
+      <p class="lead">“Estos proyectos ya se desarrollan en el liceo y pueden convertirse en un modelo educativo para la comuna”.</p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Proyectos activos en el liceo</h2>
+        <ul class="list">
+          <li>Órtesis 3D (inclusión y rehabilitación).</li>
+          <li>Cartas-AR Biología (AR/3D).</li>
+          <li>Trivias-CN (evaluación interactiva).</li>
+          <li>Hidroponía y Acuaponía (con apoyo INCAR).</li>
+          <li>SIAMP (monitoreo piscícola IoT).</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Visión y escalamiento</h2>
+        <ul class="list">
+          <li>Polo de innovación educativa comunal.</li>
+          <li>Vinculación con universidades y empresas.</li>
+          <li>Capacitación docente y equipamiento.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Apoyo requerido</h2>
+        <ul class="list">
+          <li>Respaldo municipal y financiamiento local.</li>
+          <li>Adquisición de licencias educativas.</li>
+          <li>Co-financiamiento de equipamiento y talleres.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Demostraciones</h2>
+        <a class="cta" href="apps/celulas/index.html">Ver Células (AR/3D)</a>
+        <a class="cta alt" href="apps/trivias/index.html" style="margin-left:8px">Ver Trivias</a>
+        <p class="note">Acceso restringido por correo + clave.</p>
+      </article>
+    </section>
+
+    <footer>© Portafolio — Uso interno y demostraciones.</footer>
+  </main>
+</body>
+</html>
