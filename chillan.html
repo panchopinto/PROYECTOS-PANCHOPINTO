@@ -3,54 +3,49 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Chillán — Portafolio Privado</title>
+  <title>Municipalidad de Chillán — Portafolio</title>
   <link rel="stylesheet" href="css/styles.css"/>
   <script defer src="js/guard.js"></script>
-  <style>
-    /* Mismos estilos del archivo seremi.html (copia exacta) */
-    /* ... */
-  </style>
 </head>
 <body>
+  
 <header class="topbar">
   <div class="brand">Portafolio Privado</div>
   <nav class="nav">
-    <a class="tab" href="dashboard.html">Panel</a>
-    <div class="dropdown">
-      <button class="tab dropdown-toggle" type="button">Municipalidad</button>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="sannicolas.html">San Nicolás <span class="badge">DAEM</span></a>
-        <a class="dropdown-item" href="chillan.html" aria-current="page">Chillán <span class="badge">DAEM</span></a>
-      </div>
-    </div>
+    <a class="tab " href="seremi.html">SEREMI</a>
+    <a class="tab " href="sannicolas.html">Municipalidad San Nicolás<span class="badge">DAEM</span></a>
+    <a class="tab active" href="chillan.html">Municipalidad Chillán<span class="badge">DAEM</span></a>
   </nav>
   <nav class="nav">
-    <a class="tab user" href="index.html" onclick="localStorage.removeItem('auth')">👤 Cambiar usuario</a>
+    <a class="tab" href="index.html" onclick="localStorage.removeItem('auth')">Cambiar usuario</a>
   </nav>
 </header>
 
-<main class="container">
-  <section class="hero card hero-center">
-    <h1>Presentación Municipalidad de Chillán <span class="badge">DAEM</span></h1>
-    <p class="lead">Paquetes vendibles: licencias de plataformas + órtesis 3D.</p>
-  </section>
-</main>
-
-<footer>
-  <div>Creado por: Francisco Pinto Aravena - franciscoandresp@gmail.com</div>
-  <div>Este proyecto es desarrollado con propósitos educacionales.</div>
-  <div>© <span class="year"></span> Queda prohibida la copia sin autorización.</div>
-  <div>© Todos los derechos reservados.</div>
-</footer>
-
-<script>
-  document.addEventListener('click', e=>{
-    const dp=document.querySelector('.dropdown'); if(!dp) return;
-    const btn=dp.querySelector('.dropdown-toggle');
-    if(btn.contains(e.target)){dp.classList.toggle('open')}
-    else if(!dp.contains(e.target)){dp.classList.remove('open')}
-  });
-  const y=document.querySelector('.year'); if(y) y.textContent=new Date().getFullYear();
-</script>
+  <main class="container">
+    <section class="hero card">
+      <h1>Municipalidad de Chillán — DAEM</h1>
+      <p class="lead">“Ofrezco licencias anuales de plataformas inclusivas y proyectos de órtesis 3D para estudiantes con necesidades especiales”.</p>
+    </section>
+    <section class="grid">
+      <article class="card">
+        <h2>Pack Plataformas (anual)</h2>
+        <ul class="list">
+          <li>Cartas-AR Biología: $350.000 CLP/año</li>
+          <li>Trivias-CN: $350.000 CLP/año</li>
+          <li><strong>Pack conjunto:</strong> $650.000 CLP/año por colegio</li>
+        </ul>
+        <a class="cta" href="apps/celulas/cartas-ar-biologia-main/index.html">Ver Células (AR/3D)</a>
+        <a class="cta alt" style="margin-left:8px" href="apps/trivias/trivias-biologia-main/index.html">Ver Trivias</a>
+      </article>
+      <article class="card">
+        <h2>Órtesis 3D</h2>
+        <ul class="list">
+          <li>Precio referencial: $600.000 CLP por órtesis.</li>
+          <li>Evaluación y adaptación en el liceo.</li>
+        </ul>
+      </article>
+    </section>
+    <footer>© Portafolio — Uso interno y demostraciones.</footer>
+  </main>
 </body>
 </html>
