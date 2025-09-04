@@ -7,32 +7,133 @@
   <link rel="stylesheet" href="css/styles.css"/>
   <script defer src="js/guard.js"></script>
   <style>
+    /* ---------- NAV / TOPBAR EXTRAS ---------- */
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{font-weight:700}
+
+    .nav{display:flex;align-items:center;gap:10px}
+
+    .tab{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 12px;border-radius:10px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      color:#fff;text-decoration:none;font-weight:600;
+      backdrop-filter: blur(6px);
+      transition:.2s ease;
+    }
+    .tab:hover{transform:translateY(-1px);background:rgba(255,255,255,.12)}
+
+    /* Botón "Cambiar usuario" mejorado */
+    .tab.user{
+      background: linear-gradient(180deg, rgba(66,133,244,.25), rgba(66,133,244,.15));
+      border-color: rgba(66,133,244,.35);
+    }
+    .tab.user:hover{background:rgba(66,133,244,.35)}
+
+    .tab svg{width:16px;height:16px;opacity:.9}
+
+    /* Dropdown Municipalidad */
+    .dropdown{position:relative}
+    .dropdown-toggle::after{content:"▾"; font-size:.9em; opacity:.9}
+    .dropdown-menu{
+      position:absolute; top:110%; left:0; min-width:260px;
+      background: rgba(12,14,20,.98);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:12px; padding:8px;
+      box-shadow:0 12px 28px rgba(0,0,0,.35);
+      backdrop-filter: blur(8px);
+      display:none; z-index:50;
+    }
+    .dropdown.open .dropdown-menu{display:block}
+    .dropdown:focus-within .dropdown-menu{display:block} /* accesible */
+    .dropdown-item{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:8px; padding:10px 12px;border-radius:10px;
+      color:#eaf0ff;text-decoration:none;font-weight:600;
+    }
+    .dropdown-item:hover{background:rgba(255,255,255,.08)}
+    .dropdown-item svg{width:16px;height:16px;opacity:.9}
+
+    /* Badge DAEM en verde */
+    .badge{
+      display:inline-block; margin-left:8px; padding:2px 8px; border-radius:999px;
+      font-size:.75rem; font-weight:800; letter-spacing:.3px;
+      background:#25c46a; color:#06120a; border:1px solid rgba(0,0,0,.2);
+    }
+
+    /* ---------- CARDS & CTAs ---------- */
+    .tiles{display:grid; gap:18px}
+    @media(min-width:900px){ .tiles{grid-template-columns: repeat(3,1fr);} }
+
+    .card.tile{display:flex; flex-direction:column; gap:12px}
+    .cta{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 14px; border-radius:12px; font-weight:800; text-decoration:none;
+      color:#0b0f14; border:1px solid rgba(0,0,0,.15);
+      box-shadow: 0 6px 16px rgba(0,0,0,.25);
+      transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+    }
+    .cta svg{width:18px;height:18px}
+    .cta:hover{transform: translateY(-2px); filter: brightness(1.02); box-shadow:0 10px 24px rgba(0,0,0,.32)}
+
+    /* Colores por destino */
+    .cta.seremi{ background:#8ec5ff; }
+    .cta.sannicolas{ background:#9ff2c3; }   /* verde suave */
+    .cta.chillan{ background:#ffd29f; }       /* naranja suave */
+
+    /* ---------- FOOTER ---------- */
     footer {
       margin-top: 40px;
       padding: 20px;
-      background: rgba(0, 0, 0, 0.05); /* fondo sutil */
-      border-top: 1px solid rgba(0, 0, 0, 0.15); /* separador */
+      background: rgba(0, 0, 0, 0.05);
+      border-top: 1px solid rgba(0, 0, 0, 0.15);
       font-size: 0.85rem;
-      color: #555; /* gris discreto */
+      color: #ccc;
       text-align: center;
       line-height: 1.5;
     }
-    footer div {
-      margin: 6px 0; /* espacio entre líneas */
-    }
+    footer div { margin: 6px 0; }
   </style>
 </head>
 <body>
-  
+
 <header class="topbar">
   <div class="brand">Portafolio Privado</div>
+
   <nav class="nav">
-    <a class="tab" href="seremi.html">SEREMI</a>
-    <a class="tab" href="sannicolas.html">Municipalidad San Nicolás<span class="badge">DAEM</span></a>
-    <a class="tab" href="chillan.html">Municipalidad Chillán<span class="badge">DAEM</span></a>
+    <a class="tab" href="seremi.html">
+      <!-- Icono SEREMI -->
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 10l9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V10z"/></svg>
+      SEREMI
+    </a>
+
+    <!-- Dropdown Municipalidad -->
+    <div class="dropdown">
+      <button class="tab dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+        <!-- Icono Municipalidad -->
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 21h18v-2H3v2zm2-4h14V8l-7-5-7 5v9z"/></svg>
+        Municipalidad
+      </button>
+      <div class="dropdown-menu" role="menu">
+        <a class="dropdown-item" href="sannicolas.html" role="menuitem">
+          <span>San Nicolás <span class="badge">DAEM</span></span>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 18l6-6-6-6"/></svg>
+        </a>
+        <a class="dropdown-item" href="chillan.html" role="menuitem">
+          <span>Chillán <span class="badge">DAEM</span></span>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 18l6-6-6-6"/></svg>
+        </a>
+      </div>
+    </div>
   </nav>
+
   <nav class="nav">
-    <a class="tab" href="index.html" onclick="localStorage.removeItem('auth')">Cambiar usuario</a>
+    <a class="tab user" href="index.html" onclick="localStorage.removeItem('auth')">
+      <!-- Icono usuario -->
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-4.33 0-8 1.92-8 4.29V21h16v-2.71C20 15.92 16.33 14 12 14z"/></svg>
+      Cambiar usuario
+    </a>
   </nav>
 </header>
 
@@ -41,27 +142,42 @@
     <h1>Selecciona a quién presentar</h1>
     <p class="lead">Elige el destinatario para ver el contenido adaptado y las demos (Células y Trivias).</p>
   </section>
+
   <section class="tiles">
     <article class="card tile">
       <div>
         <h2>SEREMI Educación Ñuble</h2>
         <p class="lead">Innovaciones educativas inclusivas listas para pilotear en liceos de Ñuble.</p>
       </div>
-      <a class="cta" href="seremi.html">Abrir presentación SEREMI</a>
+      <a class="cta seremi" href="seremi.html" aria-label="Abrir presentación SEREMI">
+        <!-- ícono -->
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l7 6v12a2 2 0 0 1-2 2h-3v-6H10v6H7a2 2 0 0 1-2-2V8l7-6z"/></svg>
+        Abrir presentación SEREMI
+      </a>
     </article>
+
     <article class="card tile">
       <div>
         <h2>Municipalidad San Nicolás <span class="badge">DAEM</span></h2>
         <p class="lead">Modelo educativo comunal basado en proyectos activos del liceo.</p>
       </div>
-      <a class="cta" href="sannicolas.html">Abrir presentación San Nicolás</a>
+      <a class="cta sannicolas" href="sannicolas.html" aria-label="Abrir presentación San Nicolás">
+        <!-- ícono -->
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 10l8-6 8 6v9a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1z"/></svg>
+        Abrir presentación San Nicolás
+      </a>
     </article>
+
     <article class="card tile">
       <div>
         <h2>Municipalidad Chillán <span class="badge">DAEM</span></h2>
         <p class="lead">Paquetes vendibles: licencias de plataformas + órtesis 3D.</p>
       </div>
-      <a class="cta" href="chillan.html">Abrir presentación Chillán</a>
+      <a class="cta chillan" href="chillan.html" aria-label="Abrir presentación Chillán">
+        <!-- ícono -->
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 12l10-9 10 9-1.5 1.3L20 12.9V21H4v-8.1l-.5.4z"/></svg>
+        Abrir presentación Chillán
+      </a>
     </article>
   </section>
 </main>
@@ -72,6 +188,24 @@
   <div>© <span class="year"></span> Queda prohibida la copia, redistribución o adaptación de los contenidos, modelos 3D, imágenes y código aquí publicados sin autorización expresa por escrito.</div>
   <div id="t_all_rights">© Todos los derechos reservados.</div>
 </footer>
+
+<script>
+  // Toggle del dropdown en click (soporta móvil)
+  document.addEventListener('click', (e)=>{
+    const dp = document.querySelector('.dropdown');
+    if(!dp) return;
+    const btn = dp.querySelector('.dropdown-toggle');
+    if(btn.contains(e.target)){
+      dp.classList.toggle('open');
+    }else if(!dp.contains(e.target)){
+      dp.classList.remove('open');
+    }
+  });
+
+  // Año dinámico en el footer (si tu guard.js no lo hace ya)
+  const y = document.querySelector('.year');
+  if(y){ y.textContent = new Date().getFullYear(); }
+</script>
 
 </body>
 </html>
