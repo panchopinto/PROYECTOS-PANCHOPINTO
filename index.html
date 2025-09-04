@@ -8,6 +8,14 @@
   <script defer src="js/config.js"></script>
   <script defer src="js/app.js"></script>
   <style>
+    /* Centrado sin ocupar toda la pantalla */
+    .main-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px; /* margen superior e inferior */
+    }
+
     /* Subir "Innovación Educativa" */
     .logo-badge {
       display: block;
@@ -19,6 +27,14 @@
     .cover ul li {
       color: #fff;
       text-shadow: 0 0 6px rgba(255,255,255,0.6);
+    }
+
+    /* Footer justo debajo, más tenue */
+    footer {
+      text-align: center;
+      color: #ccc; /* gris claro, menos fuerte */
+      margin-top: 20px;
+      font-size: 0.85rem; /* un poco más pequeño */
     }
   </style>
 </head>
@@ -47,5 +63,10 @@
       </form>
     </section>
   </main>
+
+  <footer>
+    <div>© <span class="year"></span> Queda prohibida la copia, redistribución o adaptación de los contenidos, modelos 3D, imágenes y código aquí publicados sin autorización expresa por escrito.</div>
+    <div>Todos los derechos reservados.</div>
+  </footer>
 </body>
 </html>
