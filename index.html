@@ -8,35 +8,37 @@
   <script defer src="js/config.js"></script>
   <script defer src="js/app.js"></script>
   <style>
-    /* Centrado sin ocupar toda la pantalla */
     .main-center {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 40px 20px; /* margen superior e inferior */
+      padding: 40px 20px;
     }
 
-    /* Subir "Innovación Educativa" */
+    /* Ajuste del badge verde */
     .logo-badge {
-      display: block;
-      margin-bottom: 8px; /* espacio extra respecto al título */
+      display: inline-block;
+      background: #28a745;
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      margin-bottom: 8px;
     }
 
-    /* Leve iluminación en los textos pedidos */
     .cover p,
     .cover ul li {
       color: #fff;
       text-shadow: 0 0 6px rgba(255,255,255,0.6);
     }
 
-    /* Footer justo debajo, más tenue y con línea separadora */
     footer {
       text-align: center;
-      color: #ccc; /* gris claro */
+      color: #ccc;
       margin-top: 20px;
       font-size: 0.85rem;
       padding-top: 10px;
-      border-top: 1px solid rgba(255, 255, 255, 0.15); /* línea sutil */
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
     }
   </style>
 </head>
@@ -46,13 +48,13 @@
       <div class="cover">
         <span class="logo-badge">Innovación Educativa</span>
         <h1>Portafolio Privado</h1>
-        <p>Órtesis 3D · Realidad Aumentada Biología · Trivias · Hidroponía · Acuaponía · SIAMP · FAPA Firmware · 3 </p>
+        <p>Órtesis 3D · Realidad Aumentada Biología · Trivias · Hidroponía · Acuaponía · SIAMP · FAPA Firmware</p>
         <ul class="bullets">
           <li>Acceso protegido (correo autorizado + clave).</li>
           <li>Demostraciones listas para pilotaje.</li>
           <li>Enfoque: inclusión, STEM y alto impacto.</li>
         </ul>
-        <p>Proyecto desarrollado con propósitos educacionales motivando el desarrollo, culturización e innovación tecnológica en las aulas.</p>
+        <p>Proyecto desarrollado con propósitos educacionales motivando el desarrollo, culturización e innovación tecnológica en las aulas</p>
       </div>
       <form id="loginForm" class="form">
         <h2>Ingresar</h2>
