@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,6 +7,42 @@
   <link rel="stylesheet" href="css/styles.css"/>
   <script defer src="js/config.js"></script>
   <script defer src="js/app.js"></script>
+  <style>
+    /* Asegura que el contenido se muestre de manera centrada */
+    .main-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Estilos para hacer el texto más brillante */
+    .cover h1, .cover p, .cover ul li {
+      color: #ffffff;
+      text-shadow: 2px 2px 5px rgba(0, 255, 255, 0.8);
+    }
+
+    .cover p {
+      font-size: 1.1rem;
+    }
+
+    /* Asegura que el formulario tenga un buen espaciado */
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 8px;
+    }
+
+    /* Asegura que el pie de página esté centrado */
+    footer {
+      text-align: center;
+      color: #fff;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
   <main class="main-center">
@@ -20,8 +55,8 @@
           <li>Acceso protegido (correo autorizado + clave).</li>
           <li>Demostraciones listas para pilotaje.</li>
           <li>Enfoque: inclusión, STEM y alto impacto.</li>
-        <p>Proyecto desarrollado con propositos educacionales motivando el desarrollo, culturizacion e innovacion tecnologica en las aulas</p>
         </ul>
+        <p>Proyecto desarrollado con propósitos educacionales motivando el desarrollo, culturización e innovación tecnológica en las aulas.</p>
       </div>
       <form id="loginForm" class="form">
         <h2>Ingresar</h2>
@@ -33,10 +68,10 @@
         <p class="note">¿No tienes acceso? Solicítalo al correo franciscoandresp@gmail.com.</p>
       </form>
     </section>
-   </main>
-      <footer>
+  </main>
+  <footer>
     <div>© <span class="year"></span> <span id="t_copy_prohibited">Queda prohibida la copia, redistribución o adaptación de los contenidos, modelos 3D, imágenes y código aquí publicados sin autorización expresa por escrito.</span></div>
     <div id="t_all_rights">Todos los derechos reservados.</div>
-      </footer>
+  </footer>
 </body>
 </html>
