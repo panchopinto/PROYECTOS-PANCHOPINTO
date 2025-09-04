@@ -6,45 +6,6 @@
   <title>SEREMI — Portafolio Privado</title>
   <link rel="stylesheet" href="css/styles.css"/>
   <script defer src="js/guard.js"></script>
-  <style>
-    /* ---------- NAV ---------- */
-    .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .brand{font-weight:700}
-    .nav{display:flex;align-items:center;gap:10px}
-    .tab{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;
-         border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);
-         color:#fff;text-decoration:none;font-weight:600;backdrop-filter:blur(6px);
-         transition:.2s ease}
-    .tab:hover{transform:translateY(-1px);background:rgba(255,255,255,.12)}
-    .tab svg{width:16px;height:16px;opacity:.9}
-    .tab.user{background:linear-gradient(180deg,rgba(66,133,244,.25),rgba(66,133,244,.15));
-              border-color:rgba(66,133,244,.35)}
-    .tab.user:hover{background:rgba(66,133,244,.35)}
-
-    /* Dropdown */
-    .dropdown{position:relative}
-    .dropdown-toggle::after{content:"▾"; font-size:.9em; opacity:.9}
-    .dropdown-menu{position:absolute;top:110%;left:0;min-width:220px;
-                   background:rgba(12,14,20,.98);border:1px solid rgba(255,255,255,.14);
-                   border-radius:12px;padding:8px;box-shadow:0 12px 28px rgba(0,0,0,.35);
-                   backdrop-filter:blur(8px);display:none;z-index:50}
-    .dropdown.open .dropdown-menu{display:block}
-    .dropdown:focus-within .dropdown-menu{display:block}
-    .dropdown-item{display:flex;align-items:center;justify-content:space-between;gap:8px;
-                   padding:10px 12px;border-radius:10px;color:#eaf0ff;text-decoration:none;font-weight:600}
-    .dropdown-item:hover{background:rgba(255,255,255,.08)}
-    .dropdown-item svg{width:16px;height:16px;opacity:.9}
-
-    /* Badge DAEM */
-    .badge{margin-left:8px;padding:2px 8px;border-radius:999px;font-size:.75rem;font-weight:800;
-           background:#25c46a;color:#06120a;border:1px solid rgba(0,0,0,.2)}
-
-    /* ---------- FOOTER ---------- */
-    footer{margin-top:40px;padding:20px;background:rgba(0,0,0,.05);
-           border-top:1px solid rgba(0,0,0,.15);font-size:.85rem;color:#ccc;
-           text-align:center;line-height:1.5}
-    footer div{margin:6px 0}
-  </style>
 </head>
 <body>
 <header class="topbar">
