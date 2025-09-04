@@ -3,60 +3,90 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>SEREMI — Portafolio</title>
+  <title>SEREMI — Portafolio Privado</title>
   <link rel="stylesheet" href="css/styles.css"/>
   <script defer src="js/guard.js"></script>
+  <style>
+    /* ---------- NAV ---------- */
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{font-weight:700}
+    .nav{display:flex;align-items:center;gap:10px}
+    .tab{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;
+         border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);
+         color:#fff;text-decoration:none;font-weight:600;backdrop-filter:blur(6px);
+         transition:.2s ease}
+    .tab:hover{transform:translateY(-1px);background:rgba(255,255,255,.12)}
+    .tab svg{width:16px;height:16px;opacity:.9}
+    .tab.user{background:linear-gradient(180deg,rgba(66,133,244,.25),rgba(66,133,244,.15));
+              border-color:rgba(66,133,244,.35)}
+    .tab.user:hover{background:rgba(66,133,244,.35)}
+
+    /* Dropdown */
+    .dropdown{position:relative}
+    .dropdown-toggle::after{content:"▾"; font-size:.9em; opacity:.9}
+    .dropdown-menu{position:absolute;top:110%;left:0;min-width:220px;
+                   background:rgba(12,14,20,.98);border:1px solid rgba(255,255,255,.14);
+                   border-radius:12px;padding:8px;box-shadow:0 12px 28px rgba(0,0,0,.35);
+                   backdrop-filter:blur(8px);display:none;z-index:50}
+    .dropdown.open .dropdown-menu{display:block}
+    .dropdown:focus-within .dropdown-menu{display:block}
+    .dropdown-item{display:flex;align-items:center;justify-content:space-between;gap:8px;
+                   padding:10px 12px;border-radius:10px;color:#eaf0ff;text-decoration:none;font-weight:600}
+    .dropdown-item:hover{background:rgba(255,255,255,.08)}
+    .dropdown-item svg{width:16px;height:16px;opacity:.9}
+
+    /* Badge DAEM */
+    .badge{margin-left:8px;padding:2px 8px;border-radius:999px;font-size:.75rem;font-weight:800;
+           background:#25c46a;color:#06120a;border:1px solid rgba(0,0,0,.2)}
+
+    /* ---------- FOOTER ---------- */
+    footer{margin-top:40px;padding:20px;background:rgba(0,0,0,.05);
+           border-top:1px solid rgba(0,0,0,.15);font-size:.85rem;color:#ccc;
+           text-align:center;line-height:1.5}
+    footer div{margin:6px 0}
+  </style>
 </head>
 <body>
-  
 <header class="topbar">
   <div class="brand">Portafolio Privado</div>
   <nav class="nav">
-    <a class="tab active" href="seremi.html">SEREMI</a>
-    <a class="tab " href="sannicolas.html">Municipalidad San Nicolás<span class="badge">DAEM</span></a>
-    <a class="tab " href="chillan.html">Municipalidad Chillán<span class="badge">DAEM</span></a>
+    <a class="tab" href="dashboard.html">Panel</a>
+    <a class="tab" href="seremi.html" aria-current="page">SEREMI</a>
+    <div class="dropdown">
+      <button class="tab dropdown-toggle" type="button">Municipalidad</button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="sannicolas.html">San Nicolás <span class="badge">DAEM</span></a>
+        <a class="dropdown-item" href="chillan.html">Chillán <span class="badge">DAEM</span></a>
+      </div>
+    </div>
   </nav>
   <nav class="nav">
-    <a class="tab" href="index.html" onclick="localStorage.removeItem('auth')">Cambiar usuario</a>
+    <a class="tab user" href="index.html" onclick="localStorage.removeItem('auth')">👤 Cambiar usuario</a>
   </nav>
 </header>
 
-  <main class="container">
-    <section class="hero card">
-      <h1>SEREMI de Educación Ñuble</h1>
-      <p class="lead">“Estos proyectos son innovaciones educativas inclusivas, listos para pilotear en liceos de Ñuble”.</p>
-    </section>
-    <section class="grid">
-      <article class="card">
-        <h2>Órtesis 3D personalizadas</h2>
-        <ul class="list">
-          <li>Apoyo directo a estudiantes PIE.</li>
-          <li>Diseño a medida, impresión 3D rápida.</li>
-          <li>Vinculación con salud y educación.</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h2>Cartas-AR Biología (Células)</h2>
-        <ul class="list">
-          <li>Modelos 3D/AR con etiquetas educativas.</li>
-          <li>Escalable a otras asignaturas.</li>
-          <li>Demo protegida por login.</li>
-        </ul>
-        <a class="cta" href="apps/celulas/cartas-ar-biologia-main/index.html">Ver Células (AR/3D)</a>
-        <p class="note">Acceso restringido por correo + clave.</p>
-      </article>
-      <article class="card">
-        <h2>Trivias Educativas</h2>
-        <ul class="list">
-          <li>Evaluaciones interactivas para el aula.</li>
-          <li>Banco de preguntas ampliable.</li>
-          <li>Reportes básicos para docentes.</li>
-        </ul>
-        <a class="cta alt" href="apps/trivias/trivias-biologia-main/index.html">Ver Trivias</a>
-        <p class="note">Acceso restringido por correo + clave.</p>
-      </article>
-    </section>
-    <footer>© Portafolio — Uso interno y demostraciones.</footer>
-  </main>
+<main class="container">
+  <section class="hero card hero-center">
+    <h1>Presentación SEREMI de Educación Ñuble</h1>
+    <p class="lead">Innovaciones educativas inclusivas listas para pilotear en establecimientos de la región.</p>
+  </section>
+</main>
+
+<footer>
+  <div>Creado por: Francisco Pinto Aravena - franciscoandresp@gmail.com</div>
+  <div>Este proyecto es desarrollado con propósitos educacionales.</div>
+  <div>© <span class="year"></span> Queda prohibida la copia, redistribución o adaptación sin autorización.</div>
+  <div>© Todos los derechos reservados.</div>
+</footer>
+
+<script>
+  document.addEventListener('click', e=>{
+    const dp=document.querySelector('.dropdown'); if(!dp) return;
+    const btn=dp.querySelector('.dropdown-toggle');
+    if(btn.contains(e.target)){dp.classList.toggle('open')}
+    else if(!dp.contains(e.target)){dp.classList.remove('open')}
+  });
+  const y=document.querySelector('.year'); if(y) y.textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
